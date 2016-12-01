@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#newyorkbutton").click(function(){
+    $.get("/newyork", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+$(document).ready(function(){
+$("#miamibutton").click(function(){
+    $.get("/miami", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+$(document).ready(function(){
+$("#neworleansbutton").click(function(){
+    $.get("/neworleans", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+$(document).ready(function(){
+$("#nashvillebutton").click(function(){
+    $.get("/nashville", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+$(document).ready(function(){
+$("#stlouisbutton").click(function(){
+    $.get("/stlouis", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+$(document).ready(function(){
+$("#chicagobutton").click(function(){
+    $.get("/chicago", function(data, status){
+    $("#city").html(data);
+    });
+});
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A Blog ABout My Travels</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/theme.css') }}">
+</head>
+
+<body>
+    
+    
+	<img src="{{ url_for('static', filename='images/hudson1.png') }}" alt="Hudson" style="width:620px;height:350px;">
+
+	<div id="page">
+        <input type="submit" name="NewYork" id="newyorkbutton" value="New York">
+        <input type="submit" name="Miami" id="miamibutton" value="Miami">
+        <input type="submit" name="New Orleans" id="neworleansbutton" value="New Orleans">
+        <input type="submit" name="Nashville" id="nashvillebutton" value="Nashville">
+	    <input type="submit" name="St Louis" id="stlouisbutton" value="St Louis">
+		<input type="submit" name="Chicago" id="chicagobutton" value="Chicago">
+	</div>
+        <div id="city" class="contentBox">
+    	<div class="innerBox">
+        	<h2>Welcome to My Travels</h2>
+          <div class="contentText"><p>My name is Dylan Carpenter and I am a student in GMIT Galway. I have always loved travelling and have been on many holidays with my parents in my younger years. The past two summers I have been travelling the world on my own and with friends though. This past summer of 2016 I was in America and the summer before I was travelling around Europe with my friend.</p><br />
+        <p>This site is for my travels of America. I worked in a summer camp in Connecticut for the first two months of my tenure in America an then I went travelling with the friends I made at camp. It was a great experience and I am hoping to do it again this coming summer.</p></div>        
+</div>
+</div>
+
+</body>
+</html>
